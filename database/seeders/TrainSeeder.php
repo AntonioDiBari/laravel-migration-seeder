@@ -16,6 +16,12 @@ class TrainSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
+
+        /* 
+        Importare file .csv e caricare i record con un while, 
+        saltando la prima row dei campi
+        */
+
         $file = fopen(__DIR__ . "/../csv/trains.csv", "r");
         $first_row = true;
 
@@ -43,6 +49,10 @@ class TrainSeeder extends Seeder
 
 
 
+        /* 
+        Generare record con Faker per dati verosimili
+        
+        */
 
         // for ($i = 0; $i < 10; $i++) {
         //     $train = new Train;

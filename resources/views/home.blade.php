@@ -41,7 +41,7 @@
                     @endforelse
                 </tbody>
             </table>
-
+            <div class="paginator d-flex justify-content-center">{{ $trains->links() }}</div>
         </div>
     </section>
 @endsection
