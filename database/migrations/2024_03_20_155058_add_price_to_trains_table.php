@@ -13,7 +13,7 @@ return new class extends Migration {
     public function up()
     {
         Schema::table('trains', function (Blueprint $table) {
-            $table->decimal('prezzo', $precision = 8, $scale = 2)->nullable()->after('orario_arrivo');
+            $table->tinyInteger('anni_servizio')->nullable()->after('orario_arrivo');
         });
     }
 
@@ -25,7 +25,7 @@ return new class extends Migration {
     public function down()
     {
         Schema::table('trains', function (Blueprint $table) {
-            $table->dropColumn('prezzo');
+            $table->dropColumn('anni_servizio');
         });
     }
 };
